@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { SideNavStylingService } from '../../services/side-nav-styling-service/side-nav-styling-service.component';
 
 @Component({
     selector: 'bottom-left-nav',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core'
 })
 
 export class BottomLeftNav {
+    constructor(public styleService: SideNavStylingService) {
+
+    }
+    public displayWidth = 0;
     public openLeftNav() {
         (<HTMLElement>document.getElementById("mySidenav")).style.width = `calc(0.5 * (100vw) ${(window.screen.width < window.screen.height) ? '- var(--scrollbar-width)' : '' })`;
         //window.addEventListener('resizeend', () => { document.getElementById("mySidenav").style.width = $('body').width() / 2; } )

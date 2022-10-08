@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core'
+import { SideNavStylingService } from '../services/side-nav-styling-service/side-nav-styling-service.component';
 
 @Component({
     selector: 'footer-player',
@@ -16,9 +17,17 @@ export class FooterPlayer {
             })
         );
     }
-    constructor(private el: ElementRef)
+    constructor(private el: ElementRef, public navStyleService: SideNavStylingService)
     {
 
+    }
+    public toggleLeftSideNavStyle()
+    {
+        this.navStyleService.toggleLeftNavVisibility();
+    }
+    public toggleRightSideNavStyle()
+    {
+        this.navStyleService.toggleRightNavVisibility();
     }
     public getFooterHeight() : number {
         return this.el.nativeElement.offsetHeight;

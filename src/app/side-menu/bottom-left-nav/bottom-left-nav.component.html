@@ -1,5 +1,6 @@
-<div id="mySidenav" class="sidenav bottom-left-nav">
-    <p href="javascript:void(0)" class="closebtn" (click)="closeLeftNav()">×</p><div class="circle left-circle"><div class="line left-line"></div></div>
+<div id="mySidenav" [ngStyle]="{'width': styleService.getLeftSideBarWidth()}" [ngClass]="['sidenav', 'bottom-left-nav', styleService.getLeftNavClass()]">
+    <p href="javascript:void(0)" class="closebtn" (click)="styleService.toggleLeftNavVisibility()">×</p>
+    <div class="circle left-circle"><div class="line left-line"></div></div>
     <p class="nav-link stroke-shadow nav-lnk-artists">Artists</p>
     <p class="nav-link stroke-shadow nav-lnk-compositions">Home</p>
     <p class="nav-link stroke-shadow nav-lnk-albums">Albums</p>

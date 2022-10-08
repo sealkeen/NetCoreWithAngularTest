@@ -8,10 +8,10 @@ import { Component, Input } from '@angular/core'
 
 export class VolumeControlAbsolute {   
     @Input() parentHeight : number
-    
+
     getElementHeight() : string
     {
         //console.log(this.parentHeight)
-        return this.parentHeight + 'px';
+        return (this.parentHeight - 4) + 'px';
     }
 }

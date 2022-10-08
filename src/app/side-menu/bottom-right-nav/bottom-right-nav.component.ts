@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { SideNavStylingService } from '../../services/side-nav-styling-service/side-nav-styling-service.component';
 
 @Component({
     selector: 'bottom-right-nav',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core'
 })
 
 export class BottomRightNav { 
+    constructor(public styleService: SideNavStylingService) { 
+        
+    }
+    public displayWidth = 0;
     public openRightNav() {
         (<HTMLElement>document.getElementById("bottomRightNav")).style.width = `calc(0.5 * (100vw) ${(window.screen.width > window.screen.height) ? '- var(--scrollbar-width)' : '' })`;
         //window.addEventListener('resizeend', () => { document.getElementById("bottomRightNav").style.width = $('body').width() / 2; } )

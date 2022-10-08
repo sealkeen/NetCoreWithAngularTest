@@ -18,12 +18,15 @@ import { BottomRightNav } from './side-menu/bottom-right-nav/bottom-right-nav.co
 import { VolumeControlAbsolute } from './footer/components/volume-control-absolute.component';
 import { MockDataComponent } from './media-streamer/store/mock-data.component';
 import { CompositionView } from './media-streamer/store/components/composition-view.component';
+import { NgStyle } from "@angular/common";
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent, NavMenuComponent, HomeComponent, CounterComponent, FetchDataComponent, MockDataComponent, CompositionView,
     FooterPlayer, BottomLeftNav, BottomRightNav, VolumeControlAbsolute
   ],
+  exports: [ CommonModule, NgStyle ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,

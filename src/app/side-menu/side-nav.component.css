@@ -6,3 +6,9 @@
 @media screen and (max-height: 450px) { .sidenav { padding-top: 15px; } .sidenav a { font-size: 18px;} }
 .close-right-nav-btn { position: absolute; top: 0; left: 10px !important; font-size: 36px !important; padding: 8px 8px 8px 8px !important; }
 .card-query-columns { flex-grow: 1; }
+
+.closed-nav { width: 0; padding-left: 0px; padding-right: 0px; }
+.closed-nav { width: 0; padding-left: 0px; padding-right: 0px; }
+
+.bottom-left-nav { left: 0; }
+.bottom-right-nav { z-index: 2; left: initial; right: 0; display: flex; flex-direction: column; justify-content: space-between; }

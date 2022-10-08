@@ -2,12 +2,12 @@
 <footer class="footer">
     <div class="navbar-expand-sm border-top">
         <div class="player-audio-div">
-            <span class="open-nav-span">&#9776;</span>
+            <span class="open-nav-span" (click)="toggleLeftSideNavStyle()">&#9776;</span>
                 <div class="track-artist-song-name">@Model.Artist?.ArtistName – @Model.CompositionName</div>
-            <audio class="player-audio-element" controls="controls" height="80" width="100%">
+            <audio class="player-audio-element" controls="controls" height="80" width="100%" autoplay>
                 <source class="player-source-element" src="" type="audio/mp3">
             </audio>
-            <span class="open-right-nav-span">&#9776;</span>
+            <span class="open-right-nav-span" (click)="toggleRightSideNavStyle()">&#9776;</span>
             <volume-control-absolute [parentHeight]="getFooterHeight()"></volume-control-absolute>
         </div>
     </div>
