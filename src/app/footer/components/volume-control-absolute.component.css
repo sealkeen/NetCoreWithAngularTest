@@ -1,0 +1,8 @@
+
+.volume-control-absolute {
+    width: 100%;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+.footer-volume-control { left: 0; position: fixed; bottom: 0; right: 0px; }
