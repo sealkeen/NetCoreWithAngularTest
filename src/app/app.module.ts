@@ -12,20 +12,17 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ApiAuthorizationModule } from 'src/api-authorization/api-authorization.module';
 import { AuthorizeGuard } from 'src/api-authorization/authorize.guard';
 import { AuthorizeInterceptor } from 'src/api-authorization/authorize.interceptor';
+import { FooterPlayer } from './footer/footer.component';
+import { BottomLeftNav } from './side-menu/bottom-left-nav/bottom-left-nav.component';
+import { BottomRightNav } from './side-menu/bottom-right-nav/bottom-right-nav.component';
+import { VolumeControlAbsolute } from './footer/components/volume-control-absolute.component';
 import { MockDataComponent } from './media-streamer/store/mock-data.component';
-import { FooterPlayer } from './media-streamer/footer/footer.component';
-import { MockComposition } from './media-streamer/store/components/mock-composition.component';
+import { CompositionView } from './media-streamer/store/components/composition-view.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavMenuComponent,
-    HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
-    MockDataComponent,
-    MockComposition,
-    FooterPlayer
+    AppComponent, NavMenuComponent, HomeComponent, CounterComponent, FetchDataComponent, MockDataComponent, CompositionView,
+    FooterPlayer, BottomLeftNav, BottomRightNav, VolumeControlAbsolute
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

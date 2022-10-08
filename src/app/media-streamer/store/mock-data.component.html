@@ -6,11 +6,11 @@
 </div>
 
 <div class="card-columns">
-    <mock-composition
+    <composition-view
         *ngFor="let cmp of compositions"
         [id]="cmp.p"
         [artist]="cmp.a"
         [title]="cmp.n"
     >
-    </mock-composition>
+    </composition-view>
 </div>

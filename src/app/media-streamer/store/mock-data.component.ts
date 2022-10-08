@@ -1,7 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { MockComposition } from './components/mock-composition.component'
-import { MockCompositionModel } from './models/mock-composition'
+import { CompositionModel } from './models/composition-model'
 
 @Component({
   selector: 'mock-data',
@@ -10,7 +9,7 @@ import { MockCompositionModel } from './models/mock-composition'
 })
 
 export class MockDataComponent {
-  public compositions: MockCompositionModel[] = [];
+  public compositions: CompositionModel[] = [];
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     //http.get<WeatherForecast[]>(baseUrl + 'weatherforecast').subscribe(result => {

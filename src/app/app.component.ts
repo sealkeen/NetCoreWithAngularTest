@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import {MockComposition} from './media-streamer/store/components/mock-composition.component'
-import { MockCompositionModel } from './media-streamer/store/models/mock-composition';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +6,4 @@ import { MockCompositionModel } from './media-streamer/store/models/mock-composi
 })
 export class AppComponent {
   title = 'app';
-  composition: MockCompositionModel ;
 }
