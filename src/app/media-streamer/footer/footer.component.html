@@ -1,0 +1,21 @@
+
+<footer class="footer">
+    <div class="navbar-expand-sm border-top">
+        <div class="player-audio-div">
+            <span class="openNavSpan">&#9776;</span>
+            <!-- @if (Model.Artist != null)
+            { -->
+                <div class="track-artist-song-name">@Model.Artist?.ArtistName – @Model.CompositionName</div>
+            <!-- }
+            else
+            { -->
+                <div class="track-artist-song-name">Unknown – @Model.CompositionName</div>
+            <!-- } -->
+            <audio class="player-audio-element" controls="controls" height="80" width="100%" autoplay>
+                <source class="player-source-element" src="" type="audio/mp3">
+            </audio>
+            <span class="openRightNavSpan">&#9776;</span>
+            <input type="range" class="volume-control-absolute" class="footer-volume-control">
+        </div>
+    </div>
+</footer>
