@@ -42,6 +42,12 @@ export class AuthorizeInterceptor implements HttpInterceptor {
       return true;
     }
 
+    // known locations for debug and production
+    if(req.url.startsWith(`https://localhost`) || req.url.startsWith(`https://sealkeen.github.io`) || req.url.startsWith(`localhost`))
+    {
+      return true;
+    }
+
     // It's a relative url like /api/Products
     if (/^\/[^\/].*/.test(req.url)) {
       return true;

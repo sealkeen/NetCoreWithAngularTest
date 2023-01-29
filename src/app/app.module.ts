@@ -20,11 +20,12 @@ import { MockDataComponent } from './media-streamer/store/mock-data.component';
 import { CompositionView } from './media-streamer/store/components/composition-view.component';
 import { NgStyle } from "@angular/common";
 import { CommonModule } from '@angular/common';
+import { FetchCompositions } from './fetch-data/tests/fetch-compositions/fetch-compositions.component';
 
 @NgModule({
   declarations: [
     AppComponent, NavMenuComponent, HomeComponent, CounterComponent, FetchDataComponent, MockDataComponent, CompositionView,
-    FooterPlayer, BottomLeftNav, BottomRightNav, VolumeControlAbsolute
+    FooterPlayer, BottomLeftNav, BottomRightNav, VolumeControlAbsolute, FetchCompositions
   ],
   exports: [ CommonModule, NgStyle ],
   imports: [
@@ -36,7 +37,8 @@ import { CommonModule } from '@angular/common';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
-      { path: 'mock-data', component: MockDataComponent }
+      { path: 'mock-data', component: MockDataComponent },
+      { path: 'fetch-compositions', component: FetchCompositions }
     ])
   ],
   providers: [

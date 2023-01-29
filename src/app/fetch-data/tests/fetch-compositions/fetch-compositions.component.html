@@ -1,0 +1,16 @@
+
+<div style="margin: auto; text-align: center;">
+    <div class="text-center">
+        <h3 class="display-4 stroke-shadow">Count of Compositions: {{compositions.length}}</h3>
+    </div>
+</div>
+
+<div class="card-columns">
+    <composition-view
+        *ngFor="let cmp of compositions"
+        [id]="cmp.id"
+        [artist]="cmp.artist"
+        [title]="cmp.title"
+    >
+    </composition-view>
+</div>

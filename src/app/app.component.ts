@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { SideNavStylingService } from './services/side-nav-styling-service/side-nav-styling-service.component';
 
-
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html'
